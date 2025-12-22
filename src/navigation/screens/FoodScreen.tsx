@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import { SearchBar } from 'react-native-screens';
+import SearchBar from '../../components/common/SearchBar';
 
 export function FoodScreen() {
   return (
