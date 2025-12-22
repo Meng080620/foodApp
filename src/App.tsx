@@ -6,6 +6,9 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as React from 'react';
 import { useColorScheme } from 'react-native';
 import { Navigation } from './navigation';
+import "../global.css";
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+
 
 Asset.loadAsync([
   ...NavigationAssets,
@@ -23,7 +26,9 @@ export function App() {
   const theme = colorScheme === 'dark' ? DarkTheme : DefaultTheme
 
   return (
-    <Navigation
+    <SafeAreaProvider>
+      <SafeAreaView style={{flex : 1}}>
+        <Navigation
       theme={theme}
       linking={{
         enabled: 'auto',
@@ -33,5 +38,7 @@ export function App() {
         SplashScreen.hideAsync();
       }}
     />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

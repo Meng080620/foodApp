@@ -14,7 +14,7 @@ const Location = () => {
           <Text style={styles.locationCountry}>Phnom Penh</Text>
         </View>
       </View>
-      <Icons name="heartfill" size={24} />
+      <Icons name="heart" size={24} />
     </View>
   );
 };
