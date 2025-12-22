@@ -10,7 +10,8 @@
     "scheme": "foodapp",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.foodapp"
+      "bundleIdentifier": "com.foodapp",
+      "appleTeamId": "DSQH6Q36KV"
     },
     "android": {
       "adaptiveIcon": {
