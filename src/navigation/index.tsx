@@ -6,23 +6,35 @@ import {
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image } from 'react-native';
-import bell from '../assets/bell.png';
-import newspaper from '../assets/newspaper.png';
-import { Home } from './screens/Home';
+
+
+//Screen
 import { Profile } from './screens/Profile';
 import { Settings } from './screens/Settings';
-import { Updates } from './screens/Updates';
 import { NotFound } from './screens/NotFound';
+import { FoodScreen } from './screens/FoodScreen';
+import AccountScreen from './screens/AccountScreen';
+import CartScreen from './screens/CartScreen';
+import SearchScreen from './screens/SearchScreen';
+import GroceryScreen from './screens/GroceryScreen';
+
+//Icons
+import food from '../assets/food.png'
+import grocery from '../assets/grocery.png'
+import search from '../assets/search.png'
+import carts from '../assets/carts.png'
+import user from '../assets/user.png'
+
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
     Home: {
-      screen: Home,
+      screen: FoodScreen,
       options: {
         title: 'Feed',
         tabBarIcon: ({ color, size }) => (
           <Image
-            source={newspaper}
+            source={food}
             tintColor={color}
             style={{
               width: size,
@@ -32,12 +44,57 @@ const HomeTabs = createBottomTabNavigator({
         ),
       },
     },
-    Updates: {
-      screen: Updates,
+    Grocery: {
+      screen: GroceryScreen,
       options: {
         tabBarIcon: ({ color, size }) => (
           <Image
-            source={bell}
+            source={grocery}
+            tintColor={color}
+            style={{
+              width: size,
+              height: size,
+            }}
+          />
+        ),
+      },
+    },
+    Search: {
+      screen: SearchScreen,
+      options: {
+        tabBarIcon: ({ color, size }) => (
+          <Image
+            source={search}
+            tintColor={color}
+            style={{
+              width: size,
+              height: size,
+            }}
+          />
+        ),
+      },
+    },
+    Carts: {
+      screen: CartScreen,
+      options: {
+        tabBarIcon: ({ color, size }) => (
+          <Image
+            source={carts}
+            tintColor={color}
+            style={{
+              width: size,
+              height: size,
+            }}
+          />
+        ),
+      },
+    },
+    Account: {
+      screen: AccountScreen,
+      options: {
+        tabBarIcon: ({ color, size }) => (
+          <Image
+            source={user}
             tintColor={color}
             style={{
               width: size,
